@@ -22,8 +22,13 @@ const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = path.dirname(__filename);
 
+// comma-separated list, e.g. CLIENT_ORIGIN=https://purrfect-haven.vercel.app,http://localhost:5173
+const allowedOrigins = (process.env.CLIENT_ORIGIN || 'http://localhost:5173')
+  .split(',')
+  .map(origin => origin.trim());
+
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: allowedOrigins,
   credentials: true,
 }));
 
