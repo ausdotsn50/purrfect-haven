@@ -28,7 +28,7 @@ const allowedOrigins = (process.env.CLIENT_ORIGIN || 'http://localhost:5173')
   .map(origin => origin.trim());
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: 'https://purrfect-haven-tawny.vercel.app',
   credentials: true,
 }));
 
