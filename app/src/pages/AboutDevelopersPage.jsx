@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button.jsx';
 import '../styles/aboutdevelopers.css';
 import cameraIcon from '../assets/icons/camera.svg';
 
 function AboutDevelopersPage() {
+  const navigate = useNavigate();
   const [hoveredId, setHoveredId] = useState(null);
 
   const developers = [
