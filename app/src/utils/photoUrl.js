@@ -1,9 +1,9 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const DEFAULT_PLACEHOLDER = 'https://placehold.co/400x400?text=No+Photo';
 
+// /uploads is proxied to Express (vite.config.js in dev, vercel.json in prod)
 export function getPhotoUrl(filePath, fallback = DEFAULT_PLACEHOLDER) {
   if (!filePath) return fallback;
-  return `${BASE_URL}/${filePath}`;
+  return `/${filePath}`;
 }
 
 export function getPetPhotoUrl(filePath, petName) {
