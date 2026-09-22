@@ -2,6 +2,7 @@ import '../styles/footer.css'
 import fbIcon from '../assets/icons/fb.svg'
 import igIcon from '../assets/icons/ig.svg'
 import ytIcon from '../assets/icons/yt.svg'
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -44,9 +45,9 @@ function Footer() {
         <div className="footer-section">
           <h3>Quick Links</h3>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/pets">Find a Pet</a></li>
-              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/pets">Find a Pet</Link></li>
+              <li><a href="#privacy">Privacy Policy</a></li>  {/* stays as <a> — it's an in-page anchor, not a route */}
             </ul>
         </div>
 

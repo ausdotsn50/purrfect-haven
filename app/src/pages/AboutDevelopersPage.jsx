@@ -94,7 +94,7 @@ function AboutDevelopersPage() {
         <p>Join us in making a difference in the lives of rescued animals.</p>
         <div className="about-buttons">
           <Button>Donate</Button>
-          <Button onClick={() => window.location.href = '/pets'} className="secondary">Browse Pets</Button>
+          <Button onClick={() => navigate('/pets')} className="secondary">Browse Pets</Button>
         </div>
       </section>
       
